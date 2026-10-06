@@ -1,0 +1,15 @@
+*.key
+*.csr
+*.crt
+*.pem
+certificates/
+
+*.tar.gz
+*.zip
+
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~

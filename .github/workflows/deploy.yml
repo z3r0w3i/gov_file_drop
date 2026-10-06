@@ -1,0 +1,20 @@
+name: Release to Nextcloud App Store
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Package and publish app release
+        uses: nextcloud-releases/action@v1
+        with:
+          app_name: gov_file_drop
+          app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
+          appstore_token: ${{ secrets.APPSTORE_TOKEN }}
